@@ -1,7 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+
+import "./Signup.css"
+
 
 const Signup = () => {
+  const navigate = useNavigate();
+  
+
   const [user, setUser] = useState({
     name:"",email:"",password:""
   })
@@ -13,10 +20,11 @@ const Signup = () => {
 
     setUser({ ...user, [name]: value });
   }
+  
   const postData = async (e) => {
     e.preventDefault();
     const { name, email, password} = user;
-    const res = await fetch("/register", {
+    const res = await fetch('/register', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -33,8 +41,10 @@ const Signup = () => {
       console.log("Invalid Registration")
     }
     else {
-      window.alert("Registration Successfull");
+      window.alert("Registration Successfull trtrdeesd");
       console.log("Registration Successfull");
+      navigate('/login');
+     
     }
 
 

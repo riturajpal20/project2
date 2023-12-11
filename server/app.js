@@ -40,15 +40,15 @@ app.get('/about',middleware, (req, res) => {
 
 })
 
-app.get('/SignUp', (req, res) => {
-    res.send(`hello Sign Up  world`);
+// app.get('/SignUp', (req, res) => {
+//     res.send(`hello Sign Up  world`);
 
-})
+// })
 
-app.get('/Login', (req, res) => {
-    res.send(`hello Login world`);
+// app.get('/Login', (req, res) => {
+//     res.send(`hello Login world`);
 
-})
+// })
 app.listen(PORT, () => {
     console.log(`server is running at port ${PORT}`);
 })

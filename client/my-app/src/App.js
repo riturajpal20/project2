@@ -63,28 +63,25 @@ import { Routes } from "react-router-dom";
 const App = () => {
   return (
     // <Navbar />
-    <Router>
-      <Switch>
-
-        <Navbar />
+    <div>
+      <Navbar />
+      <Routes>
+      
+        {/* <Navbar /> */}
       <Route element={<Home />} path="/" />
       <Route element={<About />} path="about" />
       <Route element={<Login />} path="login" />
       <Route element={<Signup />} path="signup" />
       
       
-      </Switch>
-      {/* <Navbar />
-      <Route element={<Home />} path="/" />
-      <Route element={<About />} path="about" />
-      <Route element={<Login />} path="login" />
-      <Route element={<Signup />} path="signup" />
+     
       
-       */}
       
 
      
-    </Router>
+    </Routes>
+    </div>
+    
   );
 };
 
